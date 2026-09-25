@@ -50,7 +50,7 @@ resource "aws_security_group" "monitoring_sg" {
 # EC2 Instance
 resource "aws_instance" "monitoring_node" {
   ami           = "ami-0287a05f0ef0e9d9a" # Ubuntu 22.04 LTS in ap-south-1 (example)
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
   
   vpc_security_group_ids = [aws_security_group.monitoring_sg.id]
 
